@@ -38,7 +38,6 @@ func HelloHandler(c *gofr.Context) (any, error) {
 		c.Log("Name came empty")
 		name = "World"
 	}
-
 	return fmt.Sprintf("Hello %s!", name), nil
 }
 
@@ -103,6 +102,5 @@ func MysqlHandler(c *gofr.Context) (any, error) {
 	if err != nil {
 		return nil, datasource.ErrorDB{Err: err, Message: "error from sql db"}
 	}
-
 	return value, nil
 }
